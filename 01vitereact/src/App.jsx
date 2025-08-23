@@ -1,3 +1,5 @@
+import Example from "./example"
+
 
 function App() {
 
@@ -75,6 +77,32 @@ function App() {
 
         <p>And run with below command</p>
         <p>npm run dev</p>
+
+        <h2>How JavaScript is injected to Our index.html</h2>
+        <p>When we check package.json file, we can see only, react and react-dom dependencies, but not react-scripts</p>
+        <p>So how the main.js or index.js in injected to our index.html</p>
+
+        <p>While creating react project with create-react-app, the index.html file is kept inside public folder</p>
+        <p>But the project created with vite the index.html file is kept in the project folder, outside src and public folder</p>
+
+        <p>if we check inside that index.html we can that script in inlcuded there directly, as "    <script type="module" src="/src/main.jsx"></script>"</p>
+
+        <p>As we have seen there is no much difference between the react project create create-react-app and vite@latest</p>
+
+        <p>inside the main.jsx of vite the reference of virtula DOM is stored in variable but in project created with creat-react-app it is store in a variable</p>
+    
+        <p>we care remove the strictMode as well inside project created using vite</p>
+
+        <h2>As we can see App is a function which return html, which is given to main.jsx to render it, can i do similar work of creating a function and give it App to be render</h2>
+
+        <p>Yes we can create a function or component and import it inside the App will send to main.jsx to render as below example</p>
+
+        <Example />
+
+        <p>If we trying to return multiple html tag and components from App.jsx, we will get an error</p>
+        <p>If we include it in a div or fragment <></>, we won't get an error</p>
+        <p>the componet must have extention on .jsx, and the name should be capitalized in react project created using vite</p>
+
     </>
   )
 }
