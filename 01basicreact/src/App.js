@@ -7,11 +7,11 @@ function App() {
   return (
     <>
 
-      <Explanation01 />
+      {/* <Explanation01 /> */}
 
-      <Explanation02 />
+      {/* <Explanation02 /> */}
 
-      <Explanation03 />
+      {/* <Explanation03 /> */}
 
       <Example />
 

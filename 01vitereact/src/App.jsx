@@ -3,10 +3,16 @@ import Example from "./example"
 
 function App() {
 
+  // as we have understood that the x is html part in jsx, but how we can pass variable in jsx
+  const username = "test variable"
+
   return (
     <>
 
-      <h1>Creating Project Using Vite</h1>
+      <h1>Hello from React | Vite {username}</h1> 
+      {/* we can use {} to pass variable in jsx, this is called evaluate expression, we can use the final outcome of javaScript, not if for and other, we can if loop an other above the return */}
+
+      {/* <h1>Creating Project Using Vite</h1>
         <p>Vite is a bundler</p>
         <p>As we have used npx while creating project using create-react-app, but when we are trying to create project using vite we use npm</p>
         <p>The command to creat project using vite is as below</p>
@@ -95,13 +101,13 @@ function App() {
 
         <h2>As we can see App is a function which return html, which is given to main.jsx to render it, can i do similar work of creating a function and give it App to be render</h2>
 
-        <p>Yes we can create a function or component and import it inside the App will send to main.jsx to render as below example</p>
+        <p>Yes we can create a function or component and import it inside the App will send to main.jsx to render as below example</p> */}
 
         <Example />
 
-        <p>If we trying to return multiple html tag and components from App.jsx, we will get an error</p>
+        {/* <p>If we trying to return multiple html tag and components from App.jsx, we will get an error</p>
         <p>If we include it in a div or fragment <></>, we won't get an error</p>
-        <p>the componet must have extention on .jsx, and the name should be capitalized in react project created using vite</p>
+        <p>the componet must have extention on .jsx, and the name should be capitalized in react project created using vite</p> */}
 
     </>
   )
