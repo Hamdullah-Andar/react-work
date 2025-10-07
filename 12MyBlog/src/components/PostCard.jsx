@@ -15,7 +15,10 @@ const PostCard = ({$id, title, featuredImage}) => {
             <div className='w-full justify-center mb-4'>
                 {/* as we have getFilePreview which accept and id and give us a url, which we can use in src of below image  */}
                 {/* $id is post id and featuredImage is image id  */}
-                <img src={appwriteService.getFilePreview(featuredImage)} alt={title} className='rounded-xl' />
+                <img 
+                  src={appwriteService.getFilePreview(featuredImage)} 
+                  alt={title} 
+                  className='rounded-xl' />
             </div>
             <h2 className='text-xl font-bold'>{title}</h2>
         </div>

@@ -21,7 +21,7 @@ import { useSelector } from 'react-redux'
 // useNavigation → "What’s happening while going
 
 const Header = () => {
-  const authStatus = useSelector((state) => state.auth.status)
+  const authStatus = useSelector((state) => state?.auth?.status)
   const navigate = useNavigate()
 
   // for creating navigation bar, an array gets created and loop through it, and we have objects in that array as below

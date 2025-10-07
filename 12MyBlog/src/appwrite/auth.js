@@ -50,7 +50,7 @@ export class AuthService {
     // when an object get created, the method which get called automatically is Constructor, hence we can keep creating client and account functionality there
     constructor(){
         this.client
-            .setEndpoint(conf.appwriteurl)
+            .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId);
         this.account = new Account(this.client);
     }
@@ -97,7 +97,7 @@ export class AuthService {
             // we will get the createEmailSession from appwrite doucmentation and use it for user to login and direclty return it
             // how it is handled we will see it in frontend
             // and use this login method inside createAccount 
-            return await this.client.createEmailSession(email, password)
+            return await this.account.createEmailPasswordSession(email, password)
         } catch (error) {
             throw error
         }

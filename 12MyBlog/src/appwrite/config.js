@@ -14,7 +14,7 @@ export class Service{
     // inside the constructor we create database and bucket (storage) base on client
     constructor(){
         this.client
-            .setEndpoint(conf.appwriteurl)
+            .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId);
         this.databases = new Databases(this.client);
         this.bucket = new Storage(this.client)
@@ -155,7 +155,9 @@ export class Service{
     // to preview file we use below method
     // we can use asycn for this method, as it is very fast we can write withou async
     getFilePreview(fileId){
-        return this.bucket.getFilePreview(
+        // return this.bucket.getFilePreview(
+        // getFilePreview is diprecated, hence getFileView is used as below
+        return this.bucket.getFileView(
             conf.appwriteBucketId,
             fileId
         )

@@ -28,6 +28,7 @@ const authSlice = createSlice({
             // as we have the same userData in payload we can write it as action.payload.userData or just action.payload 
             state.status = true;
             state.userData = action.payload.userData;
+            console.log(state.userData, "this is state for login")
         },
 
         // as we have access to action in logout actions, but as we dont use is, we can avoid writing it 

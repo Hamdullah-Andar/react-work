@@ -47,7 +47,7 @@ const Signup = () => {
       
         <form onSubmit={handleSubmit(create)}>
           <div className='space-y-5'>
-            <input
+            <Input
               label="Full Name: "
               placeholder='Enter your full name'
               {...register("name", {
@@ -67,7 +67,7 @@ const Signup = () => {
             })}
             />
 
-            <input 
+            <Input 
             label="Password: "
             type='password'
             placeholder='Enter you Password'
